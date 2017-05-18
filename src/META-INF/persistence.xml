@@ -9,6 +9,7 @@ version="2.0">
 <!-- entidade mapeada -->
 <class>utd.classes.jpa.Editora</class>
 <class>utd.classes.jpa.Autor</class>
+<class>utd.classes.jpa.Cliente</class>
 <properties>
 <!-- dados da conexao -->
 <property name="javax.persistence.jdbc.driver"

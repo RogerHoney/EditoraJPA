@@ -1,5 +1,6 @@
 package utd.classes.jpa;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,6 +13,8 @@ public class Editora {
 	private Long id;
 	private String nome;
 	private String email;
+	@Embedded
+	private Endereco endereco;
 	
 	public String getNome() {
 		return nome;
@@ -27,6 +30,12 @@ public class Editora {
 	}
 	public Long getId() {
 		return id;
+	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	

@@ -8,6 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import utd.classes.jpa.Editora;
+import utd.classes.jpa.Endereco;
 
 public class InsereEditoraComJPA {
 
@@ -22,8 +23,28 @@ public class InsereEditoraComJPA {
 		novaEditora.setNome(entrada.nextLine());
 			System.out.println("Digite o email:");
 		novaEditora.setEmail(entrada.nextLine());
-		entrada.close();
 		
+		
+		Endereco endereco = new Endereco();
+		novaEditora.setEndereco(endereco);
+	System.out.println("Digite o endereço do cliente: ");
+	System.out.println("Digite o país: ");
+		endereco.setPais(entrada.nextLine());
+	System.out.println("Estado: ");
+		endereco.setEstado(entrada.nextLine());
+	System.out.println("Cidade: ");
+		endereco.setCidade(entrada.nextLine());
+	System.out.println("Logadouro: ");
+		endereco.setLogadouro(entrada.nextLine());
+	System.out.println("Número: ");
+		endereco.setNumero(entrada.nextLine());
+	System.out.println("Complemento: ");
+		endereco.setComplemento(entrada.nextLine());
+	System.out.println("Cep: ");
+		endereco.setCep(entrada.nextLine());
+		
+		
+		entrada.close();
 		manager.persist(novaEditora);
 		manager.getTransaction().begin();
 		manager.getTransaction().commit();
