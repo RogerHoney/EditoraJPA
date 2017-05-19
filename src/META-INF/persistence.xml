@@ -10,6 +10,10 @@ version="2.0">
 <class>utd.classes.jpa.Editora</class>
 <class>utd.classes.jpa.Autor</class>
 <class>utd.classes.jpa.Cliente</class>
+<class>utd.classes.jpa.Editora</class>
+<class>utd.classes.jpa.Endereco</class>
+<class>utd.classes.jpa.Pedido</class>
+<class>utd.classes.jpa.Consumidor</class>
 <properties>
 <!-- dados da conexao -->
 <property name="javax.persistence.jdbc.driver"
