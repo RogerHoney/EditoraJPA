@@ -13,7 +13,7 @@ import utd.classes.jpa.Pedido;
 public class AdicionaPedidoConsumidor {
 
 	public static void main(String[] args) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("editorautd");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("livraria-utd");
 		EntityManager manager = factory.createEntityManager();
 		
 		Scanner entrada = new Scanner(System.in);
