@@ -14,7 +14,7 @@ public class InsereAutorComJPA {
 
 	public static void main(String[] args) {
 		EntityManagerFactory factory = 
-				Persistence.createEntityManagerFactory("livraria-pu");
+				Persistence.createEntityManagerFactory("editorautd");
 		
 		EntityManager manager = factory.createEntityManager();
 		Autor novoAutor = new Autor();

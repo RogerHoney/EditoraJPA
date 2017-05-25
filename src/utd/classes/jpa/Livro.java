@@ -1,29 +1,22 @@
 package utd.classes.jpa;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery (name ="Autor.findAll", query="select a from Autor a")
-public class Autor {
+@NamedQuery (name = "Livro.findByGenero" ,
+query = "select livro from Livro livro where livro.genero =:genero")
+public class Livro {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="nome_autor")
 	private String nome;
-	@ManyToMany
-	private Collection <Livro> livros = new ArrayList <Livro>();
+	private String genero;
 	
-	//getters and setters
-	
+//getters and setters
 	public Long getId() {
 		return id;
 	}
@@ -36,11 +29,11 @@ public class Autor {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Collection<Livro> getLivros() {
-		return livros;
+	public String getGenero() {
+		return genero;
 	}
-	public void setLivros(Collection<Livro> livros) {
-		this.livros = livros;
+	public void setGenero(String genero) {
+		this.genero = genero;
 	}
 	
 

@@ -15,13 +15,13 @@ public class Consultas {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("editorautd");
 		EntityManager manager = factory.createEntityManager();
 		
-		/*Recuperando a quaqntidade de revista*/
+		/*Recuperando a quaNtidade de revista*/
 		String jpql = "SELECT COUNT ( x ) FROM Revista x";
 		TypedQuery <Long> consulta1 = manager.createQuery(jpql,Long.class);
 		Long contador = consulta1.getSingleResult();
 		System.out.println("Há" +contador +" revistas. \n");
 
-		/*Recuperando a quaqntidade de revista com o preço acima de 100*/
+		/*Recuperando a quantidade de revista com o preço acima de 100*/
 		jpql = "SELECT COUNT (x) FROM Revista x WHERE x . preco >100";
 		TypedQuery <Long> consulta2 = manager.createQuery(jpql,Long.class);
 		contador = consulta2.getSingleResult();

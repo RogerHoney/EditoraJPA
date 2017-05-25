@@ -15,6 +15,7 @@ version="2.0">
 <class>utd.classes.jpa.Pedido</class>
 <class>utd.classes.jpa.Consumidor</class>
 <class>utd.classes.jpa.Revista</class>
+<class>utd.classes.jpa.Livro</class>
 <properties>
 <!-- dados da conexao -->
 <property name="javax.persistence.jdbc.driver"
